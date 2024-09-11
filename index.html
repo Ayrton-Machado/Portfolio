@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
     <header>
         <div id="header_logo">
-            <img id="head_img_logo" src="https://t3.ftcdn.net/jpg/06/14/84/58/360_F_614845842_pNcPaSxVwBiO6hGaaSXKrQOCs6xqnijX.jpg">
-            <h3 id="head_logo_text">Professor da Computação</h3>
+            <div id="head_img_logo">
+                <img src="./media/jupiter.png">
+            </div>
+            <h3 id="head_logo_text">Profissão</h3>
         </div>
-        <div>
+        <div id="head_buttons">
             <button class="head_btns">
                 <h6>Nome botao 1</h6>
                 <i></i>
@@ -26,21 +28,30 @@
                 <i></i>
             </button>
         </div>
-    </header>    
+    </header>
     
     <section>
-        <div>
-            <img id="main_img" src="https://t3.ftcdn.net/jpg/06/14/84/58/360_F_614845842_pNcPaSxVwBiO6hGaaSXKrQOCs6xqnijX.jpg"> 
+        <div id="main_img">
+            <img src="./media/astronauta.png"> 
         </div>
-        <div>
-            <h1 id="main_title">Bryam</h1>
-            <h1 id="main_subtitle">Assolini</h1>
-            <p id="main_content">texto texto texto</p>
-        </div>
+        <div id="main_content">
+            <div id="main_title">
+                <h1>Ayrton</h1>
+                <h1>Soares</h1>
+                <h1>Machado</h1>
+            </div>
+            <div id="main_desc">    
+                <p>parágrafo de texto</p>
+            </div>
+        </div>    
     </section>
 
     <footer>
-        <button class="social_button"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"></button>
+        <button class="social_button">
+            <div id="git_button_image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+            </div>
+        </button>
     </footer>
 </body>
 </html>

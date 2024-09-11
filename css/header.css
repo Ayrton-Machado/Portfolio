@@ -1,0 +1,34 @@
+header {
+    height: 9vh;
+    padding: 2vh 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(110, 110, 110);
+}
+
+#head_img_logo {
+    margin: 0 2vw;
+}
+
+#head_img_logo img {
+    height: 14vh;
+    width: 14vh;
+}
+
+.head_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9vw;
+    height: 3vw;
+    margin: 0px 2vw;
+}
+
+#header_logo, #head_buttons{
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
