@@ -1,0 +1,29 @@
+footer {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    height: 6vh;
+}
+
+#git_button_image img {
+    height: 100%;
+    width: 100%;
+}
+
+#git_button_image {
+    width: 6vh;
+    height: auto;
+}
+
+.social_button {
+    all: unset;
+
+    cursor: pointer;
+    margin: 0 3vw 0 0;
+    width: auto;
+    background-color: transparent;
+}
+
+#footer_btns {
+    margin: 3vw 0 0 0;
+}
