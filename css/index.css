@@ -2,13 +2,12 @@
 @import url(./section.css);
 @import url(./footer.css);
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
-
-
 body {
-    background-image: url('/media/astronaut.jpg');
+    background-image: url('./../assets/img/astronaut.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Noto Sans Japanese';
     margin: 0;
     padding: 0;
     width: 100vw;

@@ -35,7 +35,13 @@ header {
     justify-content: space-between;
     font-family: 'Oxanium', Geneva, Tahoma, sans-serif ;
     font-size: 2vw;
+    margin: 0;
     color: white;
+}
+
+#logo_link {
+    all: unset;
+    cursor: pointer;
 }
 
 .head_btns i {
@@ -46,7 +52,7 @@ header {
 .head_btns h6 {
     margin-left: 1vw;
     font-family: 'Oxanium', Geneva, Tahoma, sans-serif;
-    font-size: 1.5vw;
+    font-size: 1.2vw;
 }
 
 .head_btns {
@@ -61,6 +67,7 @@ header {
     margin: 0 2vw 0 2vw;
     width: 12vw;
     height: 7vh;
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {
