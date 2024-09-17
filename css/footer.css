@@ -5,23 +5,18 @@ footer {
     height: 6vh;
 }
 
-#git_button_image img {
-    height: 100%;
-    width: 100%;
-}
 
-#git_button_image {
-    width: 6vh;
-    height: auto;
+.fa-github {
+    color: white;
+    font-size: 6.5vh;
 }
 
 .social_button {
     all: unset;
+    background-color: transparent;
 
     cursor: pointer;
     margin: 0 3vw 0 0;
-    width: auto;
-    background-color: transparent;
 }
 
 #footer_btns {
