@@ -88,7 +88,7 @@ header {
     
     border: 2px solid white;
     border-radius: 15px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.541);
     color: white;
     margin: 0 2vw 0 2vw;
     width: 12vw;

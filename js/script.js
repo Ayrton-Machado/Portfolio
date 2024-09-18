@@ -8,51 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleView(viewID) {
     const views = ['inicio', 'projeto_page', 'formacao_page', 'experiencia_page'];
 
-    views.forEach(view => document.querySelector(`#${view}`).classList.add('hidden'));
-    
-    document.querySelector(`#${viewID}`).classList.remove('hidden');
-}
+    views.forEach(view => {
+        const viewElement = document.querySelector(`#${view}`)
 
-/*
-function load_experiencia() {
-    if (document.querySelector('#experiencia_page').style.display === 'block') {    
-        document.querySelector('.inicio').style.display = 'flex',
-        document.querySelector('#experiencia_page').style.display = 'none'
-        document.querySelector('#projeto_page').style.display = 'none'
-        document.querySelector('#formacao_page').style.display = 'none'
-    } else {
-        document.querySelector('.inicio').style.display = 'none',
-    document.querySelector('#experiencia_page').style.display = 'block'
-    document.querySelector('#projeto_page').style.display = 'none'
-    document.querySelector('#formacao_page').style.display = 'none'
-}       
+        if (view === viewID) {
+            if (viewElement.classList.contains('hidden')) {
+                viewElement.classList.remove('hidden')
+            } else {
+                viewElement.classList.add('hidden')
+                document.querySelector('#inicio').classList.remove('hidden')
+            }
+        } else {
+            viewElement.classList.add('hidden')
+        }
+    });
 }
-
-function load_projeto() {
-    if (document.querySelector('#projeto_page').style.display === 'block') {
-        document.querySelector('.inicio').style.display = 'flex',
-        document.querySelector('#experiencia_page').style.display = 'none'
-        document.querySelector('#projeto_page').style.display = 'none'
-        document.querySelector('#formacao_page').style.display = 'none'
-    } else {
-        document.querySelector('.inicio').style.display = 'none',
-    document.querySelector('#experiencia_page').style.display = 'none'
-    document.querySelector('#projeto_page').style.display = 'block'
-    document.querySelector('#formacao_page').style.display = 'none'
-}
-}
-
-function load_formacao() {
-    if (document.querySelector('#formacao_page').style.display === 'block') {
-        document.querySelector('.inicio').style.display = 'flex',
-        document.querySelector('#experiencia_page').style.display = 'none'
-        document.querySelector('#projeto_page').style.display = 'none'
-        document.querySelector('#formacao_page').style.display = 'none'
-    } else {
-        document.querySelector('.inicio').style.display = 'none',
-    document.querySelector('#experiencia_page').style.display = 'none'
-    document.querySelector('#projeto_page').style.display = 'none'
-    document.querySelector('#formacao_page').style.display = 'block'
-}
-}
-*/
