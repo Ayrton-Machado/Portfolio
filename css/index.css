@@ -2,6 +2,7 @@
 @import url(./section.css);
 @import url(./footer.css);
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+
 body {
     background-image: url('./../assets/img/astronaut.jpg');
     background-position: center;
@@ -13,4 +14,8 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+}
+
+.hidden {
+    display: none;
 }

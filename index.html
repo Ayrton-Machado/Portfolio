@@ -19,15 +19,15 @@
             <h3 id="head_logo_text">Profissão</h3>
         </div>  
         <div id="head_buttons">
-            <button class="head_btns">
+            <button class="head_btns" id="experiencia">
                 <h6>Experiência</h6>
                 <i class="header_icon_cubes fa-solid fa-cubes-stacked"></i>
             </button>
-            <button class="head_btns">
+            <button class="head_btns" id="formacao">
                 <h6>Formação</h6>
                 <i class="header_icon_cap fa-solid fa-graduation-cap"></i>
             </button>
-            <button class="head_btns">
+            <button class="head_btns" id="projetos">
                 <h6>Projetos</h6>
                 <i class="header_icon_gears fa-solid fa-gears"></i>
             </button>
@@ -35,8 +35,30 @@
     </header>
     
     <section>
-        <div id="experiencia">
-            <i class="section_icon_cubes fa-solid fa-cubes-stacked"></i>
+        <div id="projeto_page" class="hidden">
+            <i class="section_icons fa-solid fa-gears"></i>
+            <div class="button_contents">
+                <div class="pages_title">
+                    <h1>Projetos</h1>
+                </div>    
+                <div class="pages_desc">    
+                    <p>parágrafo de texto</p>
+                </div>
+            </div> 
+        </div>
+        <div id="formacao_page" class="hidden">
+            <i class="section_icons fa-solid fa-graduation-cap"></i>
+            <div class="button_contents">
+                <div class="pages_title">
+                    <h1>Formação</h1>
+                </div>    
+                <div class="pages_desc">    
+                    <p>parágrafo de texto</p>
+                </div>
+            </div> 
+        </div>
+        <div id="experiencia_page" class="hidden">
+            <i class="section_icons fa-solid fa-cubes-stacked"></i>
             <div class="button_contents">
                 <div class="pages_title">
                     <h1>Experiência</h1>
@@ -46,7 +68,7 @@
                 </div>
             </div> 
         </div>
-        <div class="inicio">
+        <div id="inicio" class="inicio">
             <div id="main_img">
                 <img src="./assets/img/saturn-test.png"> 
             </div>
@@ -64,7 +86,6 @@
                 <div id="main_desc">    
                     <p>parágrafo de texto</p>
                 </div>
-
             </div>    
         </div>
     </section>

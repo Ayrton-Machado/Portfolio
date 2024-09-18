@@ -9,14 +9,12 @@ section {
 
 /* other pages */
 
-#experiencia {
-    display: none;
+#experiencia_page, #projeto_page, #formacao_page {
     position: absolute;
     top: 18vh;
-    right: 45vw;
 }
 
-.section_icon_cubes {
+.section_icons {
     height: 100%;
     width: 100%;
     font-size: 200px;
@@ -44,18 +42,14 @@ section {
     display: flex;
     justify-content: baseline;
     align-items: center;
+    width: auto;
+    height: 50vh;
 }
 
 #main_img img {
     width: auto;
     height: auto;
 }
-
-#main_img {
-    width: auto;
-    height: 50vh;
-}
-
 
 #main_content {
     margin: 0 0 0 1vw;
@@ -72,30 +66,39 @@ section {
     font-weight: lighter;
 }
 
+@media (max-width: 1024px) {
+    #experiencia_page, #projeto_page, #formacao_page {
+        right: 41vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #experiencia_page, #projeto_page, #formacao_page {
+        right: 38vw;
+    }
+}
+
 @media (max-width: 490px) {
     section {
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+    .section_icons {
+        font-size: 130px;
+    }
     
-    #experiencia {
+    #experiencia_page, #projeto_page, #formacao_page {
         right: 27vw;
     }
 
-    .section_icon_gears {
-        font-size: 130px;
-    }
 
     #head_title{
         display: flex;
-
     }
 
     #main_content {
         width: 100vw;
-    }
-
-    #main_content {
         display: flex;
         justify-content: center;
         align-items: center;
