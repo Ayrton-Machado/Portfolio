@@ -1,9 +1,43 @@
 section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 80vh;
+}
+
+
+/* other pages */
+
+#experiencia {
+    display: none;
+    position: absolute;
+    top: 18vh;
+    right: 45vw;
+}
+
+.section_icon_cubes {
+    height: 100%;
+    width: 100%;
+    font-size: 200px;
+    color: white;
+}
+
+.button_contents {
+    text-align: center;
+    color: white;
+    font-family: 'Oxanium', 'Courier New', Courier, monospace;
+}
+
+.pages_desc {
+    font-weight: 100;
+}
+
+/* main page */
+
+.inicio {
+    display: flex;
+    flex-direction: row;
 }
 
 #main_img {
@@ -31,14 +65,10 @@ section {
     justify-content: center;
     color: white;
     width: 30vw;
-}
-
-#main_title {
     font-family: 'Oxanium', 'Courier New', Courier, monospace;
 }
 
 #main_desc {
-    font-family: 'Oxanium', Geneva, Tahoma, sans-serif;
     font-weight: lighter;
 }
 
@@ -47,9 +77,18 @@ section {
         justify-content: flex-start;
         align-items: flex-start;
     }
+    
+    #experiencia {
+        right: 27vw;
+    }
+
+    .section_icon_gears {
+        font-size: 130px;
+    }
 
     #head_title{
-        display: block;
+        display: flex;
+
     }
 
     #main_content {

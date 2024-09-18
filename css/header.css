@@ -56,19 +56,19 @@ header {
     justify-content: flex-end;
 }
 
-.fa-cubes-stacked {
+.header_icon_cubes {
     text-align: center;
     font-size: 3.2vh;
     color: white;
 }
 
-.fa-graduation-cap {
+.header_icon_cap {
     text-align: center;
     font-size: 3.2vh;
     color: white;
 }
 
-.fa-gears {
+.header_icon_gears {
     text-align: center;
     font-size: 3.4vh;
     color: white;
