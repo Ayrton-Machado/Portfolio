@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    window.history.pushState("", "", "/");
+    
     document.querySelector('#experiencia').addEventListener('click', () => toggleView('experiencia_page'));
     document.querySelector('#projetos').addEventListener('click', () => toggleView('projeto_page'));
     document.querySelector('#formacao').addEventListener('click', () => toggleView('formacao_page'));
-
+    
 });
 
 function toggleView(viewID) {
@@ -10,8 +12,10 @@ function toggleView(viewID) {
 
     views.forEach(view => {
         const viewElement = document.querySelector(`#${view}`)
-
+        
         if (view === viewID) {
+            window.history.replaceState(``, ``, `${viewID}`)
+            
             if (viewElement.classList.contains('hidden')) {
                 viewElement.classList.remove('hidden')
             } else {

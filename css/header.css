@@ -11,6 +11,10 @@ header {
     display: none;
 }
 
+#head_logo_text {
+    transition: color 1s ease-in;
+}
+
 #head_img_logo {
     height: 11vh;
     width: 11vh;
@@ -98,7 +102,7 @@ header {
 }
 
 .head_btns:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {

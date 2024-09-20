@@ -66,18 +66,6 @@ section {
     font-weight: lighter;
 }
 
-@media (max-width: 1024px) {
-    #experiencia_page, #projeto_page, #formacao_page {
-        right: 41vw;
-    }
-}
-
-@media (max-width: 768px) {
-    #experiencia_page, #projeto_page, #formacao_page {
-        right: 38vw;
-    }
-}
-
 @media (max-width: 490px) {
     section {
         justify-content: flex-start;
@@ -89,7 +77,7 @@ section {
     }
     
     #experiencia_page, #projeto_page, #formacao_page {
-        right: 27vw;
+        right: 30vw;
     }
 
 
