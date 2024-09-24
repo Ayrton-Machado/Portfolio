@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifolio</title>
     <link rel="stylesheet" href="./../css/index.css">
-    <link rel="stylesheet" href="./../css/index/section.css">
+    <link rel="stylesheet" href="./../css/projetos/section.css">
     <script src="https://kit.fontawesome.com/2282fdb901.js" crossorigin="anonymous"></script>
-    <script src="./../../controller/js/script.js"></script>
+    <script type="module" src="./../../controller/js/projetos.js" defer></script>
+
+    <title>Projetos</title>
 </head>
 <body>
     <header>
         <div id="header_logo">
             <div id="head_img_logo">
-                <a id="logo_link" href="./../pages/index.html">
+                <a id="logo_link" href="/view/pages/index.html">
                     <img src="./../../assets/img/saturn-test.png">
                 </a>
             </div>
@@ -34,37 +35,21 @@
             </button>
         </div>
     </header>
-    
+
     <section>
-        <div id="inicio" class="inicio">
-            <div id="main_img">
-                <img src="./../../assets/img/saturn-test.png"> 
-            </div>
-            <div id="main_content">
-                <!-- mobile section title -->
-                <div id="head_title">
-                    <h1>Profissão</h1>
-                </div>
-                
-                <div id="main_title">
-                    <div id="head_name">
-                        <h1>Ayrton Machado</h1>
-                    </div>    
-                </div>
-                <div id="main_desc">    
-                    <p>parágrafo de texto</p>
-                </div>
-            </div>    
-        </div>
+        <nav id="banners">
+            <div style="background-color: green;" class="banner"></div>
+            <div style="background-color: yellow;" class="banner"></div>
+            <div style="background-color: pink;" class="banner"></div>
+            <div style="background-color: gray;" class="banner"></div>
+        </nav>
+
+        <nav id="btns_banners">
+            <button class="btn_banner" onclick="trocarBanner(0)"></button>
+            <button class="btn_banner" onclick="trocarBanner(1)"></button>
+            <button class="btn_banner" onclick="trocarBanner(2)"></button>
+            <button class="btn_banner" onclick="trocarBanner(3)"></button>
+        </nav>
     </section>
-
-    <footer>
-        <button class="social_button">
-            <a href="https://github.com/Ayrton-Machado">
-                <i class="fa-brands fa-github"></i>
-            </a>    
-        </button>
-    </footer>
-
 </body>
 </html>
