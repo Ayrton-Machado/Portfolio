@@ -21,6 +21,7 @@ function toggleView(viewID) {
             } else {
                 viewElement.classList.add('hidden')
                 document.querySelector('#inicio').classList.remove('hidden')
+                window.history.pushState("", "", "/");
             }
         } else {
             viewElement.classList.add('hidden')
