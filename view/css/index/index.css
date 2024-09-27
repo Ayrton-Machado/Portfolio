@@ -8,12 +8,16 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family: 'Noto Sans Japanese';
     margin: 0;
     padding: 0;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
+    animation: surge 2s ease-in;
+}
+
+@keyframes surge {
+    from {}
 }
 
 .hidden {
