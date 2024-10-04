@@ -1,1 +1,7 @@
 @import url(./banner.css);
+@import url(./cards.css);
+
+#cartoes {
+    position: absolute;
+    top: 60vh;
+}
