@@ -1,0 +1,25 @@
+#cartoes {
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    height: 25vh;
+}
+
+.card {
+    text-align: center;
+    height: 13vw;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.596);
+    font-family: 'oxanium', 'Courier New', Courier, monospace;
+
+    border: solid 2px rgb(255, 255, 255);
+    border-radius: 10%;
+
+    color: white;
+}
+
+.card h1 {
+    font-size: 36px;
+    font-weight: lighter;
+}

@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
     <link rel="stylesheet" href="./../css/index.css">
-    <link rel="stylesheet" href="./../css/projetos/section.css">
+    <link rel="stylesheet" href="./../css/cards/section.css">
     <script src="https://kit.fontawesome.com/2282fdb901.js" crossorigin="anonymous"></script>
-    <script type="module" src="./../../controller/js/projetos/projetos.js" defer></script>
-
-    <title>Projetos</title>
+    <script type="module" src="./../../controller/js/cards/cards.js" defer></script>
 </head>
 <body>
     <header>
         <div id="header_logo">
             <div id="head_img_logo">
-                <a id="logo_link" href="/view/pages/index.html">
+                <a id="logo_link" href="./../pages/index.html">
                     <img src="./../../assets/img/saturn-test.png">
                 </a>
             </div>
@@ -36,20 +35,5 @@
         </div>
     </header>
 
-    <section>
-        <nav id="banners">
-            <div style="background-color: green;" class="banner"></div>
-            <div style="background-color: yellow;" class="banner"></div>
-            <div style="background-color: pink;" class="banner"></div>
-            <div style="background-color: gray;" class="banner"></div>
-        </nav>
-
-        <nav id="btns_banners">
-            <button class="btn_banner" onclick="trocarBanner(0)"></button>
-            <button class="btn_banner" onclick="trocarBanner(1)"></button>
-            <button class="btn_banner" onclick="trocarBanner(2)"></button>
-            <button class="btn_banner" onclick="trocarBanner(3)"></button>
-        </nav>
+    <section id="cartoes">
     </section>
-</body>
-</html>
