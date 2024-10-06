@@ -1,7 +1,8 @@
 @import url(./banner.css);
 @import url(./cards.css);
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-#cartoes {
-    position: absolute;
-    top: 60vh;
+section {
+    height: 38vh;
+    width: 100vh;
 }

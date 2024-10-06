@@ -1,5 +1,5 @@
 #banners {
-    width: 400vw;
+    width: 600vw;
     height: 35vh;
 
     position: absolute;
@@ -10,39 +10,81 @@
 }
 
 .banner {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgb(0, 255, 0);
+    font-size: 50px;
+    font-family: 'Anonymous Pro', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 95vw;
     height: 35vh;
-    margin: 0 5vh;
-    background-color: blue;
+    margin: 0 2vw 0 32vw;
+    padding-left: 2vh;
+    border-radius: 15px; /* Cantos arredondados para um visual mais suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra para profundidade */
+}
+
+.banner p a {
+    color: rgb(0, 255, 0);
+    font-weight: 400;
+}
+
+.banner h1 {
+    margin: 3vh 0;
+    font-weight: 400;
 }
 
 #btns_banners {
-    height: 5vh;
-    width: 16vw;
-    
+    height: 36vh;
+    width: 30vw;
+    border-radius: 3vw;
+
     position: absolute;
-    left: 42vw;
-    top: 43vh;
-    
+    left: 2vw;
+    top: 12vh;
+
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none; /* Oculta a barra de rolagem */
+
+    animation: fade-in 1s forwards; /* Animação de entrada */
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Movendo para baixo ao aparecer */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .btn_banner {
     all: unset;
-    background-color: antiquewhite;
-    border-radius: 10%;
-    
-    height: 1vh;
-    width: 3vh;
-    margin: 0 1vw;
+    color: white;
+    border: 3px solid white;
+    border-radius: 5vh;
+    text-align: center;
+    font-family: 'Oxanium', 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 2vw;
+
+    height: 4vh;
+    width: 50vh;
+    margin: 1vh 1vw;
+    padding: 1vh;
 
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease; /* Adicionando transição de fundo */
 }
 
 .btn_banner:hover {
-    transform: scale(1.2);
+    transform: scale(1.04);
+    background-color: rgba(255, 255, 255, 0.2); /* Fundo semi-transparente ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.295); /* Sombra ao passar o mouse */
+}
+
+.animate {
+    animation: slide 0.5s forwards;
 }
