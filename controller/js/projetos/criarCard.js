@@ -1,4 +1,4 @@
-import { data } from "./projetos_db.js"
+import { data } from "../../../model/projetos_db.js"
 
 export function criarCard() {
     let sectionCards = document.getElementById('cartoes')

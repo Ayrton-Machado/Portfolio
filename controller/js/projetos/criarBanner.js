@@ -13,7 +13,7 @@ function typeText(element, text, speed) {
     type(); // Inicializa a digitação
 }
 
-import { data } from "./projetos_db.js";
+import { data } from "../../../model/projetos_db.js";
 import { trocarBanner } from './trocarBanner.js';
 
 export function criarBanner() {
@@ -63,8 +63,8 @@ export function btnBanner() {
             let link = banners[j].querySelector('a');
 
             // Aplica o efeito de digitação
-            typeText(banner_title, data[j].title, 100); // Título com efeito de digitação
-            typeText(link, data[j].link, 100); // Link com efeito de digitação
+            typeText(banner_title, data[j].title, 80); // Título com efeito de digitação
+            typeText(link, data[j].link, 30); // Link com efeito de digitação
         });
 
         btnsBanners.appendChild(btn);
