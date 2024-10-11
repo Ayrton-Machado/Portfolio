@@ -1,0 +1,35 @@
+#telaCadastro {
+    height: 100%;
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: -100vw;
+
+    background-color: rgb(0, 0, 0, 0.2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputs_cad {
+    width: 30vw;
+    height: 50vh;
+
+    background-color: white;
+    border-radius: 2vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 5vh 0;
+
+}
+#buttons_telaCad {
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+}
