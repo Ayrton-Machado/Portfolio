@@ -1,12 +1,9 @@
 //import { data } from "../../../model/projetos_db.js";
-import { data } from "../../../model/projetos_db.js";
 import { buscar_info_cartoes } from "./../../../services/projetos/cartoes_services.js";
 
-export function criarCard() {
-    buscar_info_cartoes()
-    .then(data);
+export async function criarCard() {
+    const data = await buscar_info_cartoes();
     let sectionCards = document.getElementById('cartoes');
-    console.log(data.length)
     for (let i=0; i < data.length; i++){
         let card = document.createElement('div');
         card.className = 'card';
