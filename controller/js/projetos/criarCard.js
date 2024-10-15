@@ -1,6 +1,7 @@
 //import { data } from "../../../model/projetos_db.js";
-import { buscar_info_cartoes, excluirCartao } from "./../../../services/projetos/cartoes_services.js";
+import { atualizarCartao, buscar_info_cartoes, excluirCartao } from "./../../../services/projetos/cartoes_services.js";
 import { mostraTelaCad } from "./telaCad.js";
+import { mostraTelaEdit } from "./telaEdit.js";
 
 export async function criarCard() {
     const data = await buscar_info_cartoes();
@@ -25,13 +26,21 @@ export async function criarCard() {
         icon.className = `${data[i].icon_class}`;
         let h3 = document.createElement('h3');
         h3.textContent = data[i].desc;
-        let btn = document.createElement('button')
-        btn.textContent = "EXCLUIR"
-        btn.addEventListener('click', () => {
+        let btn_del = document.createElement('button')
+        btn_del.textContent = "EXCLUIR"
+        btn_del.addEventListener('click', () => {
             excluirCartao(i);
         })
 
-        card.appendChild(btn);
+        let btn_edit = document.createElement('button')
+        btn_edit.textContent = "EDIT"
+        btn_edit.addEventListener('click', () => {
+            mostraTelaEdit(i);
+        })
+
+
+        card.appendChild(btn_edit);
+        card.appendChild(btn_del);
         card.appendChild(h1);
         card.appendChild(icon);
         card.appendChild(h3);
