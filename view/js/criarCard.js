@@ -1,7 +1,7 @@
 //import { data } from "../../../model/projetos_db.js";
-import { atualizarCartao, buscar_info_cartoes, excluirCartao } from "./../../../services/projetos/cartoes_services.js";
-import { mostraTelaCad } from "./telaCad.js";
-import { mostraTelaEdit } from "./telaEdit.js";
+import { atualizarCartao, buscar_info_cartoes, excluirCartao } from "../../services/projetos/cartoes_services.js";
+import { mostraTelaCad } from "../../controller/js/projetos/telaCad.js";
+import { mostraTelaEdit } from "../../controller/js/projetos/telaEdit.js";
 
 export async function criarCard() {
     const data = await buscar_info_cartoes();

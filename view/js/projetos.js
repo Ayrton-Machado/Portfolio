@@ -1,5 +1,5 @@
-import { criarBanner, btnBanner } from "../../controller/js/projetos/criarBanner.js";
-import { criarCard } from "../../controller/js/projetos/criarCard.js";
+import { criarBanner, btnBanner } from "../js/criarBanner.js";
+import { criarCard } from "../js/criarCard.js";
 import { mostraTelaCad, escondeTelaCad } from "../../controller/js/projetos/telaCad.js";
 import { cadastrarCartao } from "../../services/projetos/cartoes_services.js";
 import { escondeTelaEdit, recolheDadosEdit } from "./../../controller/js/projetos/telaEdit.js";

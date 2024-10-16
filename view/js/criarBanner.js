@@ -13,7 +13,7 @@ function typeText(element, text, speed) {
     type(); // Inicializa a digitação
 }
 
-import { data } from "../../../model/projetos_db.js";
+import { data } from "../../model/projetos_db.js";
 import { trocarBanner } from './trocarBanner.js';
 
 export function criarBanner() {
