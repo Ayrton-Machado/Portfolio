@@ -15,12 +15,14 @@ export function mostraTelaEdit(i) {
 export function recolheDadosEdit() {
     let title = document.getElementById('titulo_edit')
     let icon_class = document.getElementById('icon_class_edit')
+    let link = document.getElementById('link_edit')
     let desc = document.getElementById('desc_edit')
 
-    atualizarCartao(id, title.value, icon_class.value, desc.value)
+    atualizarCartao(id, title.value, icon_class.value, link.value, desc.value)
     escondeTelaEdit();
 
     title.value = ''
     icon_class.value = ''
+    link.value = ''
     desc.value = ''
 }

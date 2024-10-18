@@ -7,6 +7,7 @@ export async function criarCard() {
     const data = await buscar_info_cartoes();
     let sectionCards = document.getElementById('cartoes');
     sectionCards.innerHTML = "";
+    sectionCards.style.width = `${data.length+1}00vw`
 
     let cardAdd = document.createElement('button')
     cardAdd.className = 'card'
@@ -28,12 +29,14 @@ export async function criarCard() {
         h3.textContent = data[i].desc;
         let btn_del = document.createElement('button')
         btn_del.textContent = "EXCLUIR"
+        btn_del.className = 'func_btns'
         btn_del.addEventListener('click', () => {
             excluirCartao(i);
         })
 
         let btn_edit = document.createElement('button')
         btn_edit.textContent = "EDIT"
+        btn_edit.className = 'func_btns'
         btn_edit.addEventListener('click', () => {
             mostraTelaEdit(i);
         })

@@ -6,7 +6,7 @@
     top: 0;
     left: -100vw;
 
-    background-color: rgb(0, 0, 0, 0.2);
+    background-color: rgb(0, 0, 0, 0.8);
 
     display: flex;
     justify-content: center;
@@ -16,9 +16,6 @@
 #inputs_cad {
     width: 30vw;
     height: 50vh;
-
-    background-color: white;
-    border-radius: 2vw;
 
     display: flex;
     flex-direction: column;
@@ -32,4 +29,47 @@
     width: 15vw;
     display: flex;
     justify-content: space-between;
+}
+
+.menu_info {
+    background-color: black;
+    border: 2px solid rgb(0, 255, 0);
+}
+
+.menu_info input {
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 0);
+    padding: 8px;
+    width: 10vw;
+    caret-color: rgb(0, 255, 0);
+    color: rgb(0, 255, 0);
+}
+
+.menu_info input:focus{
+    outline: 0;
+}
+
+.menu_info input::placeholder {
+    color: rgb(0, 255, 0);
+}
+
+.menu_info h1 {
+    color: rgb(0, 255, 0);
+    font-family: 'Oxanium', 'Courier New', Courier, monospace;
+    font-size: 5vh;
+    padding: none;
+}
+
+.menu_info button {
+    padding: 10px;
+    margin: 0 10px;
+    background-color: black;
+    color: rgb(0, 255, 0);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.1s ease-in;
+}
+
+.menu_info button:hover {
+    transform: scale(1.08);
 }

@@ -13,13 +13,18 @@ function typeText(element, text, speed) {
     type(); // Inicializa a digitação
 }
 
-import { data } from "../../model/projetos_db.js";
-import { trocarBanner } from './trocarBanner.js';
+import { buscar_info_cartoes } from '../../services/projetos/cartoes_services.js';
+import { trocarBanner, trocarCard } from './trocarBanner.js';
 
-export function criarBanner() {
-    let sectionBanners = document.querySelector('#banners');
-    
-    for (let i = 0; i <= data.length - 1; i++) {
+
+
+export async function criarBanner() {
+    const response = await buscar_info_cartoes();
+    let sectionBanners = await document.querySelector('#banners');
+    sectionBanners.innerHTML = ''
+
+    sectionBanners.style.width = `${response.length}00vw`
+    for (let i = 0; i <= response.length - 1; i++) {
         let banner = document.createElement('div');
         banner.classList.add('banner');
         
@@ -29,11 +34,11 @@ export function criarBanner() {
         let link = document.createElement('a');
 
         // Adiciona o ícone
-        icon.className = `${data[i].icon_class}`;
+        icon.className = `${response[i].icon_class}`;
         icon.style.color = 'rgb(0, 255, 0)';
 
         // Adiciona o link
-        link.href = data[i].link;
+        link.href = response[i].link;
         link.target = "_blank";
 
         // Não aplicamos o efeito de digitação aqui ainda, só criamos os elementos
@@ -45,26 +50,38 @@ export function criarBanner() {
     }
 }
 
-export function btnBanner() {
-    let btnsBanners = document.querySelector('#btns_banners');
+export async function btnBanner() {
+    const response = await buscar_info_cartoes();
+    let btnsBanners = await document.querySelector('#btns_banners');
     const banners = document.querySelectorAll('.banner');
+    btnsBanners.innerHTML = ''
+    banners.innerHTML = ''
+
+    let btn_add = document.createElement('button')
+    btn_add.className = 'btn_banner'
+    btn_add.textContent = '+'
+    btn_add.addEventListener('click', ()=>{
+        trocarCard(0);
+    })
+    btnsBanners.appendChild(btn_add)
     
-    for (let j = 0; j <= data.length - 1; j++) {
+    for (let j = 0; j <= response.length; j++) {
         let btn = document.createElement('a');
-        btn.innerHTML = data[j].title;
+        btn.innerHTML = response[j].title;
         btn.classList.add('btn_banner');
 
         // Ao clicar no botão, troca o banner e aplica o efeito de digitação
         btn.addEventListener('click', () => {
             trocarBanner(j);
+            trocarCard(j+1);
             
             // Seleciona os elementos do banner atual para aplicar a digitação
             let banner_title = banners[j].querySelector('h1');
             let link = banners[j].querySelector('a');
 
             // Aplica o efeito de digitação
-            typeText(banner_title, data[j].title, 80); // Título com efeito de digitação
-            typeText(link, data[j].link, 30); // Link com efeito de digitação
+            typeText(banner_title, response[j].title, 80); // Título com efeito de digitação
+            typeText(link, response[j].link, 30); // Link com efeito de digitação
         });
 
         btnsBanners.appendChild(btn);

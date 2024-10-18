@@ -48,10 +48,12 @@
     </nav>
 
     <section id="telaCadastro">
-        <div id="inputs_cad">
-            <input id="titulo" type="text">
-            <input id="icon_class" type="text">
-            <input id="desc" type="text">
+        <div id="inputs_cad" class="menu_info">
+            <h1>Cadastrar</h1>
+            <input id="titulo" type="text" placeholder="Título">
+            <input id="icon_class" type="text" placeholder="Class Icon">
+            <input id="link" type="text" placeholder="Link">
+            <input id="desc" type="text" placeholder="Description">
             <div id="buttons_telaCad">
                 <button onclick="cadastrarCartao()">SALVAR</button>
                 <button onclick="escondeTelaCad()">CANCELAR</button>
@@ -59,10 +61,12 @@
         </div>
     </section>
     <section id="telaEdit">
-        <div id="inputs_cad">
-            <input id="titulo_edit" type="text">
-            <input id="icon_class_edit" type="text">
-            <input id="desc_edit" type="text">
+        <div id="inputs_cad" class="menu_info">
+            <h1>Editar</h1>
+            <input id="titulo_edit" type="text" placeholder="Título">
+            <input id="icon_class_edit" type="text" placeholder="Class Icon">
+            <input id="link_edit" type="text" placeholder="Link">
+            <input id="desc_edit" type="text" placeholder="Description">
             <div id="buttons_telaEdit">
                 <button onclick="recolheDadosEdit()">EDITAR</button>
                 <button onclick="escondeTelaEdit()">CANCELAR</button>

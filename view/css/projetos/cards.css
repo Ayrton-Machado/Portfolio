@@ -11,7 +11,7 @@
 
 .card {
     height: 20vw;
-    width: 94vw;
+    width: 96vw;
     margin: 0 2vw;
     background-color: rgba(0, 0, 0, 0.596);
     font-family: 'oxanium', 'Courier New', Courier, monospace;
@@ -33,6 +33,7 @@
 .card h3 {
     font-size: 28px;
     font-weight: lighter;
+    padding: 0 5vw;
 }
 
 .card i {
@@ -40,3 +41,13 @@
     width: auto;
 }
 
+.func_btns {
+    all: unset;
+    font-family: 'Oxanium', 'Courier New', Courier, monospace;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 1vw;
+    margin: 10px 10px 0 10px;
+    border-radius: 10%;
+    border: 1px solid white;
+}
