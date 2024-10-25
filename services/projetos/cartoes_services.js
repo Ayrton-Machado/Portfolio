@@ -21,11 +21,9 @@ export async function excluirCartao(index) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({card: index})
+            body: JSON.stringify({id: index})
         });
-        criarCard();
-        criarBanner();
-        btnBanner();
+        window.location.reload();
     } catch (e) {
         console.log(e);
     }
@@ -51,9 +49,7 @@ export async function cadastrarCartao() {
             })
         })
         escondeTelaCad();
-        criarCard();
-        criarBanner();
-        btnBanner();
+        window.location.reload();
     } catch (e) {
         alert(e)
     }
@@ -78,7 +74,7 @@ export async function atualizarCartao(id, title, icon_class, link, desc) {
             })
         })
         escondeTelaEdit();
-        criarCard();
+        window.location.reload();
     } catch(e) {
         alert(e)
     }
