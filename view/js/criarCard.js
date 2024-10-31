@@ -1,4 +1,3 @@
-//import { data } from "../../../model/projetos_db.js";
 import { atualizarCartao, buscar_info_cartoes, excluirCartao } from "../../services/projetos/cartoes_services.js";
 import { mostraTelaCad } from "../../controller/js/projetos/telaCad.js";
 import { mostraTelaEdit } from "../../controller/js/projetos/telaEdit.js";
@@ -31,14 +30,16 @@ export async function criarCard() {
         btn_del.textContent = "EXCLUIR"
         btn_del.className = 'func_btns'
         btn_del.addEventListener('click', () => {
-            excluirCartao(i);
+            excluirCartao(data[i].id);
+            console.log(data[i].id)
         })
-
+        
         let btn_edit = document.createElement('button')
         btn_edit.textContent = "EDIT"
         btn_edit.className = 'func_btns'
         btn_edit.addEventListener('click', () => {
-            mostraTelaEdit(i);
+            mostraTelaEdit(data[i].id);
+            console.log(data[i].id)
         })
 
 

@@ -5,7 +5,7 @@ import { escondeTelaEdit } from "../../controller/js/projetos/telaEdit.js";
 
 export async function buscar_info_cartoes() {
     try {
-        let response = await fetch('http://172.17.16.44:3000');
+        let response = await fetch('https://backend-portfolio-tau.vercel.app');
         let data = await response.json();
         data = data.cards
         return data
@@ -16,14 +16,14 @@ export async function buscar_info_cartoes() {
 
 export async function excluirCartao(index) {
     try {
-        const response = await fetch("http://172.17.16.44:3000/delete", {
+        const response = await fetch("https://backend-portfolio-tau.vercel.app/delete", {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({id: index})
+            body: JSON.stringify({cartao: index})
         });
-        window.location.reload();
+        window.location.reload()
     } catch (e) {
         console.log(e);
     }
@@ -36,7 +36,7 @@ export async function cadastrarCartao() {
     let desc = document.getElementById('desc')
 
     try {
-        const response = await fetch('http://172.17.16.44:3000/cadastrar', {
+        const response = await fetch('https://backend-portfolio-tau.vercel.app/cadastrar', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -49,7 +49,7 @@ export async function cadastrarCartao() {
             })
         })
         escondeTelaCad();
-        window.location.reload();
+        window.location.reload()
     } catch (e) {
         alert(e)
     }
@@ -60,7 +60,7 @@ export async function atualizarCartao(id, title, icon_class, link, desc) {
         alert(e)
     }
     try {
-        const response = await fetch(`http://172.17.16.44:3000/cartoes`, {
+        const response = await fetch(`https://backend-portfolio-tau.vercel.app/cartoes`, {
             method: "PUT",
             headers: {
                 'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ export async function atualizarCartao(id, title, icon_class, link, desc) {
             })
         })
         escondeTelaEdit();
-        window.location.reload();
+        window.location.reload()
     } catch(e) {
         alert(e)
     }
